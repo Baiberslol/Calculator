@@ -2,16 +2,21 @@ import time
 import os
 import sys
 import ctypes
-
-
+#-------------------------------------------------------------------------------
 if os.name == "nt":  # If the system is windows
                 ctypes.windll.kernel32.SetConsoleTitleW(
                     f"Python Calculator - Made by Terium#9139 on discord")
+#-------------------------------------------------------------------------------
 
+license = "-This project made by 'Terium#9139' on discord / 'Baiberslol' on github. DO NOT skid this tool. If you like it you can rate it at github :) 'https://Github.com/Baiberslol'"
 
+print(license)
+time.sleep(5)
+os.system('cls' if os.name == 'nt' else 'clear')
+#-------------------------------------------------------------------------------
 from subprocess import call
-
 call('color b', shell=True)
+#--------------------------------------------------------------------------------
 
 print("""
   #####                                                                         
@@ -23,8 +28,6 @@ print("""
   #####   #    #  ######   ####    ####   ######  #    #    #     ####   #    #\n""" )
 
 time.sleep(0.5)
-
-output_file = "Calculation-log.txt"
 
 
 def add(x, y):
@@ -41,16 +44,16 @@ def divide(x, y):
 
 
 print("Select operation.")
-print("1.Add")
-print("2.Substract")
-print("3.Multiply")
-print("4.Divide")
+print("[*] 1.Add +")
+print("[*] 2.Substract -")
+print("[*] 3.Multiply *")
+print("[*] 4.Divide /")
 
 while True:
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (1-2-3-4): ")
     
     if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
+        num1 = float(input("\nEnter first number: "))
         num2 = float(input("Enter second number: "))
         
         if choice == '1':
@@ -67,9 +70,9 @@ while True:
             
             
             
-    next_calculation = input("Lets do next calculation? (yes/no): ")
+    next_calculation = input("Lets do another calculation? (yes/no): ")
     if next_calculation == "no":
-        print("See you next time!")
+        print("See you next time! :)")
         time.sleep(2)
         break
     
